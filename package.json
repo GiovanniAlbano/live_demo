@@ -1,0 +1,10 @@
+{
+  "name": "live-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "node backend/server.mjs",
+    "dev:frontend": "node frontend/server.mjs",
+    "test": "node --test"
+  }
+}

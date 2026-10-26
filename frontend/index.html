@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f6f1">
+    <title>Live Demo | Service Check</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Live Demo home">
+          <span class="brand-mark" aria-hidden="true">LD</span>
+          <span>live_demo</span>
+        </a>
+        <span class="environment"><span class="environment-dot" aria-hidden="true"></span>Local environment</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">Service monitor <span>01 / 01</span></p>
+          <h1 id="page-title">Frontend <span class="title-connector">to</span> Backend</h1>
+          <p class="intro-copy">A live connection check for the local application stack.</p>
+        </section>
+
+        <section class="health-panel" aria-labelledby="health-title">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">Backend service</p>
+              <h2 id="health-title">Health endpoint</h2>
+            </div>
+            <span id="connection-status" class="status-badge" data-state="checking" role="status" aria-live="polite">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="status-label">Checking</span>
+            </span>
+          </div>
+
+          <div class="endpoint-row">
+            <span class="method-tag">GET</span>
+            <code>http://127.0.0.1:3000/health</code>
+          </div>
+
+          <div class="result-row">
+            <div class="result-mark" aria-hidden="true">API</div>
+            <div class="result-copy">
+              <h3 id="result-title">Connecting to backend</h3>
+              <p id="result-detail">Waiting for the first health response.</p>
+            </div>
+            <button id="check-button" class="check-button" type="button">
+              <span class="button-icon" aria-hidden="true">&#8635;</span>
+              <span>Check again</span>
+            </button>
+          </div>
+
+          <details class="response-details">
+            <summary>Response payload</summary>
+            <pre><code id="response-output">Waiting for response...</code></pre>
+          </details>
+        </section>
+
+        <footer class="page-footer">
+          <span>Frontend <code>:5173</code></span>
+          <span class="footer-divider" aria-hidden="true"></span>
+          <span>Backend <code>:3000</code></span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
