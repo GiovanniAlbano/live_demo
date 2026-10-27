@@ -1,0 +1,5 @@
+﻿[
+  {"id":"p-001","name":"Starter Plan","category":"Software","price":29.99,"available":true},
+  {"id":"p-002","name":"Pro Plan","category":"Software","price":79.99,"available":true},
+  {"id":"p-003","name":"Enterprise Plan","category":"Services","price":199.99,"available":false}
+]
